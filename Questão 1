@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+enum Dia {
+    Dom, Seg, Ter, Qua, Qui, Sex, Sab
+};
+
+char* nome(enum Dia d) {
+    if (d == Dom) {
+        return "Domingo";
+    } else if (d == Seg) {
+        return "Segunda";
+    } else if (d == Ter) {
+        return "Terca";
+    } else if (d == Qua) {
+        return "Quarta";
+    } else if (d == Qui) {
+        return "Quinta";
+    } else if (d == Sex) {
+        return "Sexta";
+    } else if (d == Sab) {
+        return "Sabado";
+    } else {
+        return "Dia invalido";
+    }
+}
+int main() {
+    printf("%s\n", nome(Ter));  // Deve exibir "Terca"
+    return 0;
+}
